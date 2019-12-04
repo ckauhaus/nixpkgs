@@ -236,6 +236,12 @@
      release announcement</link> for more information.
     </para>
    </listitem>
+   <listitem>
+     <para>
+       <literal>PRETTY_NAME</literal> in <literal>/etc/os-release</literal>
+       now uses the short rather than full version string.
+     </para>
+   </listitem>
   </itemizedlist>
  </section>
 </section>

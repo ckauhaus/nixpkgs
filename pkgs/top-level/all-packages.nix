@@ -915,6 +915,8 @@ in
 
   glyr = callPackage ../tools/audio/glyr { };
 
+  hpe-ltfs = callPackage ../tools/backup/hpe-ltfs { };
+
   httperf = callPackage ../tools/networking/httperf { };
 
   ili2c = callPackage ../tools/misc/ili2c { };
@@ -5782,6 +5784,8 @@ in
   cntlm = callPackage ../tools/networking/cntlm { };
 
   pastebinit = callPackage ../tools/misc/pastebinit { };
+
+  pmacct = callPackage ../tools/networking/pmacct { };
 
   polygraph = callPackage ../tools/networking/polygraph { };
 
@@ -17809,6 +17813,8 @@ in
 
   airwave = callPackage ../applications/audio/airwave { };
 
+  akira-unstable = callPackage ../applications/graphics/akira { };
+
   alembic = callPackage ../development/libraries/alembic {};
 
   alchemy = callPackage ../applications/graphics/alchemy { };
@@ -22333,7 +22339,11 @@ in
   clightning = callPackage ../applications/blockchains/clightning.nix { };
 
   bitcoin-abc  = libsForQt5.callPackage ../applications/blockchains/bitcoin-abc.nix { boost = boost165; withGui = true; };
-  bitcoind-abc = callPackage ../applications/blockchains/bitcoin-abc.nix { boost = boost165; withGui = false; };
+  bitcoind-abc = callPackage ../applications/blockchains/bitcoin-abc.nix {
+    boost = boost165;
+    mkDerivation = stdenv.mkDerivation;
+    withGui = false;
+  };
 
   bitcoin-unlimited  = libsForQt5.callPackage ../applications/blockchains/bitcoin-unlimited.nix {
     inherit (darwin.apple_sdk.frameworks) Foundation ApplicationServices AppKit;
