@@ -6,3 +6,4 @@ rules:
     upstream: NixOS:nixos-19.09
   - base: master
     upstream: NixOS:master
+    mergeMethod: merge
