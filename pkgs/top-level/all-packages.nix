@@ -6942,7 +6942,7 @@ in
 
   vifm = callPackage ../applications/misc/vifm { };
 
-  vifm-full = callPackage ../applications/misc/vifm { 
+  vifm-full = callPackage ../applications/misc/vifm {
     mediaSupport = true;
     inherit lib udisks2 python3;
   };
@@ -9223,6 +9223,8 @@ in
   pypy2Packages = pypy2.pkgs;
   pypy27Packages = pypy27.pkgs;
   pypy3Packages = pypy3.pkgs;
+
+  pythonManylinuxPackages = callPackage ./../development/interpreters/python/manylinux { };
 
   update-python-libraries = callPackage ../development/interpreters/python/update-python-libraries { };
 
